@@ -1,0 +1,117 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    color: #ff6600;
+}
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.option {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.option:hover {
+    background-color: #ff8533;
+    transform: scale(1.05);
+}
+.option.correct {
+    background-color: green !important;
+}
+.option.incorrect {
+    background-color: red !important;
+}
+.progress {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    background-color: #ff6600;
+    transition: width 0.5s ease-in-out;
+}
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #ff8533;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+
+/* Botón Volver a la página principal */
+.boton-volver {
+    position: fixed; /* Usamos fixed para que siempre esté en la esquina superior derecha */
+    top: 20px;
+    right: 20px;
+    background-color: rgb(137, 0, 0);
+    border-radius: 30px;
+    padding: 10px 30px; /* Ajustamos el padding para hacerlo más atractivo */
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Tamaño de texto adecuado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Aseguramos que el botón esté por encima de otros elementos */
+}
+
+.boton-volver:hover {
+    background-color: red; /* Cambia a rojo cuando el usuario pase el mouse */
+}

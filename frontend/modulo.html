@@ -18,40 +18,146 @@
     
     <div class="body-info">
         <h1 class="titulo">Minería de datos</h1>
-        <p>La minería de datos es el proceso de analizar grandes conjuntos de datos para descubrir patrones, tendencias o relaciones ocultas que pueden ser útiles para la toma de decisiones. Utiliza técnicas de estadística, aprendizaje automático e inteligencia artificial para extraer conocimiento valioso a partir de la información recopilada.</p>
+        <p><strong>La minería de datos es el proceso de analizar grandes conjuntos de datos para descubrir patrones, tendencias o relaciones ocultas que pueden ser útiles para la toma de decisiones. Utiliza técnicas de estadística, 
+            aprendizaje automático e inteligencia artificial para extraer conocimiento valioso a partir de la información recopilada.</strong></p>
         <div class="info">
             <button class="accordion"><strong> &#10148; ¿Qué es un dataset?</strong></button>
             <div class="panel">
-                <p>
-                    Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
-                     Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
-                </p>
-                <p>Los formatos más comunes de un dataset incluyen:</p>
-                <p> &#10004; CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</p>
-                <p> &#10004; Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</p>
-                <p> &#10004; JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</p>
-                <p> &#10004; SQL: Datos almacenados en bases de datos relacionales.</p>
-                <p> &#10004; Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</p>
-                <p>Su organización y formato dependen del propósito específico, como análisis estadístico, aprendizaje automático o visualización.</p>
-            </div>
-        
-            <button class="accordion"><strong> &#10148; Herramientas</strong></button>
-            <div class="panel">
-                <p>Para llevar la minería de datos a la práctica, existen herramientas poderosas. Las que más se destacan son las siguientes:</p>
-                <h3>Orange Data Mining</h3>
-                <p> &#10004; Esta herramienta es como el "paint" para la minería de datos: tiene una interfaz amigable que permite arrastrar y soltar para construir flujos de trabajo. Es ideal si no tienes mucha experiencia programando, pero también puedes usar Python si necesitas personalizar.</p>
-                <h3>KNIME</h3>
-                <p> &#10004; KNIME es como una caja de herramientas gigante. Es extensible y compatible con varios lenguajes como Python y R. Puedes realizar desde tareas simples hasta análisis complejos con ayuda de extensiones.</p>
-                <h3>RapidMiner</h3>
-                <p> &#10004; RapidMiner es una navaja suiza para la minería de datos. Aunque su instalación puede ser más compleja, ofrece un entorno completo para análisis, desde la preparación de datos hasta el despliegue de modelos.</p>
-                <h3>Weka</h3>
-                <p> &#10004; Una de las herramientas más veteranas, muy popular en el ámbito académico. Weka es perfecta si necesitas experimentar con algoritmos de aprendizaje automático sin complicarte mucho con la codificación.</p>
+                <div class="content-container">
+                    <p>
+                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
+                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
+                    </p>
+                    <ul>
+                        <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
+                        <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
+                        <li>JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</li>
+                        <li>SQL: Datos almacenados en bases de datos relacionales.</li>
+                        <li>Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</li>
+                    </ul>
+                </div>
             </div>
         
             <button class="accordion"><strong> &#10148; Componentes de un dataset</strong></button>
             <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl. Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+                <div class="content-container">
+                    <p>
+                        Un dataset contiene varios componentes a tener en consideración si queremos aplicarlo con posterioridad en algún modelo; Los siguientes componentes son:
+                    </p>
+                    <ul>
+                        <li>Características (Features o Variables): Son las columnas del dataset y representan los atributos o propiedades de los datos. Pueden ser: Numéricas (Valores cuantitativos, Ej: la edad.), categóricas (Valores cualitativos, Ej: género.) y ordinales (Datos categóricos como un órden lógico, Ej: niveles educativos.).</li>
+                        <li>Observaciones (Registros o Instancias): Son las filas del dataset y corresponden a cada caso individual o muestra de datos (e.g., un cliente, un paciente).</li>
+                        <li>Etiquetas (Labels o Targets): En datasets supervisados, esta columna indica el resultado esperado o variable dependiente (e.g., precio de una casa, clasificación de spam).</li>
+                        <li>Datos Faltantes (Missing Values): Celdas que no contienen datos debido a errores, omisiones o falta de información.</li>
+                        <li>Meta Información (Metadata): Datos adicionales que describen el contexto del dataset, como descripciones de las variables, unidades de medida o información de su origen.</li>
+                        <li>Formato de Datos: Especifica cómo están representados los datos, como texto, números, fechas, entre otros.</li>
+                    </ul>
+                </div>
             </div>
+
+            <button class="accordion"><strong> &#10148; Herramientas</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>Para llevar la minería de datos a la práctica, existen herramientas poderosas. Las que más se destacan son las siguientes:</p>
+                    <h3>Orange Data Mining</h3>
+                    <ul>
+                        <li>Orange es una herramienta de minería de datos y aprendizaje automático basada en flujos de trabajo visuales. Es altamente intuitiva y no requiere conocimientos avanzados de programación,
+                             lo que la hace ideal para principiantes y para quienes buscan prototipar rápidamente análisis de datos.</li>
+                    </ul>
+                    <h3>KNIME</h3>
+                    <ul>
+                        <li>KNIME es una plataforma de análisis de datos basada en nodos y flujos de trabajo. Está diseñada para integrar y procesar datos, realizar minería de datos y crear modelos de aprendizaje automático.</li>
+                    </ul>
+                    <h3>RapidMiner</h3>
+                    <ul>
+                        <li>RapidMiner es una plataforma integral de análisis predictivo y minería de datos, diseñada para cubrir todo el ciclo de vida de un proyecto, desde la preparación de datos hasta la implementación de modelos.</li>
+                    </ul>
+                    <h3>Weka</h3>
+                    <ul>
+                        <li>Weka es una herramienta de código abierto enfocada en la minería de datos y aprendizaje automático, ampliamente utilizada en entornos académicos y de investigación.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="accordion"><strong> &#10148; Orange y otras herramientas</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>
+                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
+                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
+                    </p>
+                    <ul>
+                        <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
+                        <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
+                        <li>JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</li>
+                        <li>SQL: Datos almacenados en bases de datos relacionales.</li>
+                        <li>Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</li>
+                    </ul>
+                    </div>
+                </div>
+        
+            <button class="accordion"><strong> &#10148; Tipos de Modelos</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>
+                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
+                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
+                    </p>
+                    <ul>
+                        <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
+                        <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
+                        <li>JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</li>
+                        <li>SQL: Datos almacenados en bases de datos relacionales.</li>
+                        <li>Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="accordion"><strong> &#10148; Recursos: Datasets públicos</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>
+                        Los siguientes links contienen una gran gama de datasets públicos, en los cuales se pueden descargar para poder entrenar modelos.
+                    </p>
+                    <ul>
+                        <li>Kaggle: Plataforma con miles de datasets para minería de datos y machine learning. <a href="https://www.kaggle.com/">Click aquí</a></li>
+                        <li>UCI Machine Learning Repository: Fuente confiable con datasets organizados por categorías. <a href="https://archive.ics.uci.edu/">Click aquí</a></li>
+                        <li>Data.gov: Repositorio oficial del gobierno de EE. UU. con acceso a datasets públicos. <a href="https://data.gov/">Click aquí</a></li>
+                    </ul>
+                </div>
+            </div>
+          
+            <button class="accordion"><strong> &#10148; Recursos: Artículos</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>
+                        Los siguientes artículos explican con mayor calidad sobre la importancia de la minería de datos en el mundo y sus tipos de modelos variados.
+                    </p>
+                    <ul>
+                        <li>AWS - ¿Qué es la minería de datos?. <a href="https://aws.amazon.com/es/what-is/data-mining/">Click aquí</a></li>
+                        <li>IBM - ¿Qué es la minería de datos?. <a href="https://www.ibm.com/mx-es/topics/data-mining">Click aquí</a></li>
+                        <li>BBVA - ¿Cómo puede ayudar el 'data mining' o minería de datos a las empresas?. <a href="https://www.bbva.com/es/innovacion/como-puede-ayudar-el-data-mining-a-las-empresas/">Click aquí</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="accordion"><strong> &#10148; Recursos: Videos tutoriales de modelos en Orange</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <p>
+                        Los siguientes artículos explican con mayor calidad sobre la importancia de la minería de datos en el mundo y sus tipos de modelos variados.
+                    </p>
+                    <ul>
+                        <li>AWS - ¿Qué es la minería de datos?. <a href="https://aws.amazon.com/es/what-is/data-mining/">Click aquí</a></li>
+                        <li>IBM - ¿Qué es la minería de datos?. <a href="https://www.ibm.com/mx-es/topics/data-mining">Click aquí</a></li>
+                        <li>BBVA - ¿Cómo puede ayudar el 'data mining' o minería de datos a las empresas?. <a href="https://www.bbva.com/es/innovacion/como-puede-ayudar-el-data-mining-a-las-empresas/">Click aquí</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="quizz-btn-container">
+            <a href="../quizz/codigo_juego.php" class="boton-volver"> <strong>Ir a quizz</strong> </a>
         </div>
     </div>
         <script>
@@ -59,17 +165,14 @@
 
             accordions.forEach(accordion => {
                 accordion.addEventListener('click', function () {
-                    // Cerrar todos los paneles
-                    accordions.forEach(acc => {
-                        const panel = acc.nextElementSibling;
-                        if (panel.style.display === 'block') {
-                            panel.style.display = 'none';
-                        }
-                    });
-
-                    // Abrir el panel actual si estaba cerrado
                     const panel = this.nextElementSibling;
-                    if (panel.style.display !== 'block') {
+                    const isCurrentlyOpen = panel.style.display === 'block';
+
+                    // Cerrar todos los paneles
+                    accordions.forEach(acc => acc.nextElementSibling.style.display = 'none');
+
+                    // Si el panel actual estaba cerrado, abrirlo
+                    if (!isCurrentlyOpen) {
                         panel.style.display = 'block';
                     }
                 });

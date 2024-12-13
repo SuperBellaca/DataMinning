@@ -22,15 +22,20 @@
         <div class="info">
             <button class="accordion"><strong> &#10148; Manual para procesar datasets</strong></button>
             <div class="panel">
+                <div class="content-container">
                 <p>
                     Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
                      Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
                 </p>
+                </div>
             </div>
         
             <button class="accordion"><strong> &#10148; Gráfico del CSV procesado</strong></button>
             <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl. Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+                <div class="content-container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl.
+                         Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -39,17 +44,14 @@
 
         accordions.forEach(accordion => {
             accordion.addEventListener('click', function () {
-                // Cerrar todos los paneles
-                accordions.forEach(acc => {
-                    const panel = acc.nextElementSibling;
-                    if (panel.style.display === 'block') {
-                        panel.style.display = 'none';
-                    }
-                });
-
-                // Abrir el panel actual si estaba cerrado
                 const panel = this.nextElementSibling;
-                if (panel.style.display !== 'block') {
+                const isCurrentlyOpen = panel.style.display === 'block';
+
+                // Cerrar todos los paneles
+                accordions.forEach(acc => acc.nextElementSibling.style.display = 'none');
+
+                // Si el panel actual estaba cerrado, abrirlo
+                if (!isCurrentlyOpen) {
                     panel.style.display = 'block';
                 }
             });
