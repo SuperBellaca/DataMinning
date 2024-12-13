@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minería de datos</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="../images/logo.png" alt="logo">
+        </div>
+        <div>
+            <a href="index.html" class="boton-volver"> <strong>Volver</strong> </a>
+        </div>
+    </div>
+    
+    <div class="body-info">
+        <h1 class="titulo">Minería de datos</h1>
+        <p>La minería de datos es el proceso de analizar grandes conjuntos de datos para descubrir patrones, tendencias o relaciones ocultas que pueden ser útiles para la toma de decisiones. Utiliza técnicas de estadística, aprendizaje automático e inteligencia artificial para extraer conocimiento valioso a partir de la información recopilada.</p>
+        <div class="info">
+            <button class="accordion"><strong> &#10148; ¿Qué es un dataset?</strong></button>
+            <div class="panel">
+                <p>
+                    Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
+                     Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
+                </p>
+                <p>Los formatos más comunes de un dataset incluyen:</p>
+                <p> &#10004; CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</p>
+                <p> &#10004; Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</p>
+                <p> &#10004; JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</p>
+                <p> &#10004; SQL: Datos almacenados en bases de datos relacionales.</p>
+                <p> &#10004; Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</p>
+                <p>Su organización y formato dependen del propósito específico, como análisis estadístico, aprendizaje automático o visualización.</p>
+            </div>
+        
+            <button class="accordion"><strong> &#10148; Herramientas</strong></button>
+            <div class="panel">
+                <p>Para llevar la minería de datos a la práctica, existen herramientas poderosas. Las que más se destacan son las siguientes:</p>
+                <h3>Orange Data Mining</h3>
+                <p> &#10004; Esta herramienta es como el "paint" para la minería de datos: tiene una interfaz amigable que permite arrastrar y soltar para construir flujos de trabajo. Es ideal si no tienes mucha experiencia programando, pero también puedes usar Python si necesitas personalizar.</p>
+                <h3>KNIME</h3>
+                <p> &#10004; KNIME es como una caja de herramientas gigante. Es extensible y compatible con varios lenguajes como Python y R. Puedes realizar desde tareas simples hasta análisis complejos con ayuda de extensiones.</p>
+                <h3>RapidMiner</h3>
+                <p> &#10004; RapidMiner es una navaja suiza para la minería de datos. Aunque su instalación puede ser más compleja, ofrece un entorno completo para análisis, desde la preparación de datos hasta el despliegue de modelos.</p>
+                <h3>Weka</h3>
+                <p> &#10004; Una de las herramientas más veteranas, muy popular en el ámbito académico. Weka es perfecta si necesitas experimentar con algoritmos de aprendizaje automático sin complicarte mucho con la codificación.</p>
+            </div>
+        
+            <button class="accordion"><strong> &#10148; Componentes de un dataset</strong></button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl. Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+            </div>
+        </div>
+    </div>
+        <script>
+            const accordions = document.querySelectorAll('.accordion');
+
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function () {
+                    // Cerrar todos los paneles
+                    accordions.forEach(acc => {
+                        const panel = acc.nextElementSibling;
+                        if (panel.style.display === 'block') {
+                            panel.style.display = 'none';
+                        }
+                    });
+
+                    // Abrir el panel actual si estaba cerrado
+                    const panel = this.nextElementSibling;
+                    if (panel.style.display !== 'block') {
+                        panel.style.display = 'block';
+                    }
+                });
+            });
+        </script>
+
+        <hr>
+    <footer>
+        <p class="copy">&copy; | 2024 | David Cortés - Javiera Araya - Cristóbal Sáez - Diego Pizarro</p>
+    </footer>
+</body>
+</html>

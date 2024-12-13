@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minería de datos</title>
+</head>
+<body>
+    
+    <div class="nav-bar-index">
+        <div class="logo">
+            <img src="../images/logo.png" alt="logo">
+        </div>
+        <div>
+            <a href="modulo.html" class="boton-educativo"> <strong>Educativo</strong> </a>
+        </div>
+    </div>
+
+    <div class="body-info">
+        <h1 class="titulo">Minería de datos</h1>
+        <div class="info">
+            <button class="accordion"><strong> &#10148; Manual para procesar datasets</strong></button>
+            <div class="panel">
+                <p>
+                    Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
+                     Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
+                </p>
+            </div>
+        
+            <button class="accordion"><strong> &#10148; Gráfico del CSV procesado</strong></button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl. Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', function () {
+                // Cerrar todos los paneles
+                accordions.forEach(acc => {
+                    const panel = acc.nextElementSibling;
+                    if (panel.style.display === 'block') {
+                        panel.style.display = 'none';
+                    }
+                });
+
+                // Abrir el panel actual si estaba cerrado
+                const panel = this.nextElementSibling;
+                if (panel.style.display !== 'block') {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    <hr>
+    <footer>
+        <p class="copy">&copy; | 2024 | David Cortés - Javiera Araya - Cristóbal Sáez - Diego Pizarro</p>
+    </footer>
+
+</body>
+</html>
