@@ -18,16 +18,16 @@
     
     <div class="body-info">
         <h1 class="titulo">Minería de datos</h1>
-        <p><strong>La minería de datos es el proceso de analizar grandes conjuntos de datos para descubrir patrones, tendencias o relaciones ocultas que pueden ser útiles para la toma de decisiones. Utiliza técnicas de estadística, 
+        <p><strong>La minería de datos es una técnica asistida ques se basa en el proceso de analizar grandes conjuntos de datos para descubrir patrones, tendencias o relaciones ocultas que pueden ser útiles para la toma de decisiones. Utiliza técnicas de estadística, 
             aprendizaje automático e inteligencia artificial para extraer conocimiento valioso a partir de la información recopilada.</strong></p>
         <div class="info">
             <button class="accordion"><strong> &#10148; ¿Qué es un dataset?</strong></button>
             <div class="panel">
                 <div class="content-container">
-                    <p>
-                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
-                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
-                    </p>
+                    <h4>
+                        Un dataset contiene varios componentes a tener en consideración si queremos aplicarlo con posterioridad en algún modelo.
+                    </h4>
+                    <h4>Los siguientes componentes son:</h4>
                     <ul>
                         <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
                         <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
@@ -42,10 +42,20 @@
             <div class="panel">
                 <div class="content-container">
                     <p>
-                        Un dataset contiene varios componentes a tener en consideración si queremos aplicarlo con posterioridad en algún modelo; Los siguientes componentes son:
+                        Un dataset contiene varios componentes a tener en consideración si queremos aplicarlo con posterioridad en algún modelo.
                     </p>
                     <ul>
-                        <li>Características (Features o Variables): Son las columnas del dataset y representan los atributos o propiedades de los datos. Pueden ser: Numéricas (Valores cuantitativos, Ej: la edad.), categóricas (Valores cualitativos, Ej: género.) y ordinales (Datos categóricos como un órden lógico, Ej: niveles educativos.).</li>
+                        <p>
+                            Los siguientes componentes son:
+                        </p>
+                        <li>Características (Features o Variables): Son las columnas del dataset que representan los atributos y los tipos de los datos que almacenan.</li>
+                        <li>Tipos de datos: 
+                            <ul>
+                                <li>Numéricos (Valores cuantitativos, Ej: la edad.).</li>
+                                <li>Categóricos (Valores cualitativos, Ej: género.).</li>
+                                <li>Ordinales (Datos categóricos como un órden lógico, Ej: niveles educativos.).</li>
+                            </ul>
+                            </li>
                         <li>Observaciones (Registros o Instancias): Son las filas del dataset y corresponden a cada caso individual o muestra de datos (e.g., un cliente, un paciente).</li>
                         <li>Etiquetas (Labels o Targets): En datasets supervisados, esta columna indica el resultado esperado o variable dependiente (e.g., precio de una casa, clasificación de spam).</li>
                         <li>Datos Faltantes (Missing Values): Celdas que no contienen datos debido a errores, omisiones o falta de información.</li>
@@ -55,61 +65,190 @@
                 </div>
             </div>
 
-            <button class="accordion"><strong> &#10148; Herramientas</strong></button>
-            <div class="panel">
-                <div class="content-container">
-                    <p>Para llevar la minería de datos a la práctica, existen herramientas poderosas. Las que más se destacan son las siguientes:</p>
-                    <h3>Orange Data Mining</h3>
-                    <ul>
-                        <li>Orange es una herramienta de minería de datos y aprendizaje automático basada en flujos de trabajo visuales. Es altamente intuitiva y no requiere conocimientos avanzados de programación,
-                             lo que la hace ideal para principiantes y para quienes buscan prototipar rápidamente análisis de datos.</li>
-                    </ul>
-                    <h3>KNIME</h3>
-                    <ul>
-                        <li>KNIME es una plataforma de análisis de datos basada en nodos y flujos de trabajo. Está diseñada para integrar y procesar datos, realizar minería de datos y crear modelos de aprendizaje automático.</li>
-                    </ul>
-                    <h3>RapidMiner</h3>
-                    <ul>
-                        <li>RapidMiner es una plataforma integral de análisis predictivo y minería de datos, diseñada para cubrir todo el ciclo de vida de un proyecto, desde la preparación de datos hasta la implementación de modelos.</li>
-                    </ul>
-                    <h3>Weka</h3>
-                    <ul>
-                        <li>Weka es una herramienta de código abierto enfocada en la minería de datos y aprendizaje automático, ampliamente utilizada en entornos académicos y de investigación.</li>
-                    </ul>
-                </div>
-            </div>
-
             <button class="accordion"><strong> &#10148; Orange y otras herramientas</strong></button>
             <div class="panel">
                 <div class="content-container">
-                    <p>
-                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
-                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
-                    </p>
-                    <ul>
-                        <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
-                        <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
-                        <li>JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</li>
-                        <li>SQL: Datos almacenados en bases de datos relacionales.</li>
-                        <li>Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</li>
-                    </ul>
+                    <div class="cubes">
+                        <h2>¿En qué casos Orange es una buena opción?</h2>
+                        <p>Orange es particularmente útil para quienes están empezando con la minería de datos, así como para aquellos que necesitan una herramienta rápida y visual para prototipar 
+                            modelos o realizar análisis sin profundizar demasiado en la programación.</p>
+                        <h3><u>Orange Data Mining</u></h3>
+                        <ul>
+                            <li>Orange es una herramienta de minería de datos y aprendizaje automático basada en flujos de trabajo visuales. Es altamente intuitiva y no requiere conocimientos avanzados de programación,
+                                lo que la hace ideal para principiantes y para quienes buscan prototipar rápidamente análisis de datos.
+                            </li>
+                        
+                                <div class="punto">
+                                    <ul>
+                                        <li>Principiantes y usuarios sin experiencia en programación: Debido a su interfaz visual intuitiva, Orange permite crear flujos de trabajo y realizar análisis de datos sin necesidad de tener conocimientos avanzados de programación.</li>
+                                        <li>Prototipado rápido de análisis de datos: Si necesitas probar rápidamente diferentes técnicas de minería de datos o modelos de aprendizaje automático, Orange es útil por su simplicidad y velocidad para crear prototipos.</li>
+                                        <li>Educación y aprendizaje: Orange es ideal en entornos académicos para enseñar minería de datos y aprendizaje automático debido a su accesibilidad y facilidad para visualizar el flujo de trabajo.</li>
+                                        <li>Proyectos pequeños y medianos: Para proyectos que no requieren una infraestructura compleja, Orange es adecuado debido a su facilidad de uso y su enfoque en la creación de modelos de manera sencilla.</li>
+                                    </ul>
+                                </div>
+                        </ul>
+                        <h3><u>KNIME</u></h3>
+                        <ul>
+                            <li>KNIME es una plataforma de análisis de datos basada en nodos y flujos de trabajo. Está diseñada para integrar y procesar datos, realizar minería de datos y crear modelos de aprendizaje automático.</li>
+                        
+                            <div class="punto">
+                                <ul>
+                                    <li>Mayor flexibilidad y escalabilidad: KNIME es ideal para proyectos más complejos y de mayor escala. Ofrece una mayor variedad de nodos y módulos para tareas avanzadas, como integración de datos, minería de texto y procesamiento de imágenes.</li>
+                                    <li>Soporte de integración: KNIME es muy fuerte en la integración de diversas fuentes de datos y plataformas externas, lo que la convierte en una opción preferida para proyectos empresariales o con datos de diferentes orígenes.</li>
+                                    <li>Extensión y personalización: Al ser muy extensible, KNIME permite integrar scripts en lenguajes como Python y R para tareas más personalizadas, lo que lo hace adecuado para usuarios intermedios y avanzados.</li>
+                                    <li>Comunidad y soporte empresarial: Tiene una comunidad activa y opciones de soporte empresarial, lo que es ventajoso para empresas que necesiten soluciones más robustas y escalables.</li>
+                                </ul>           
+                            </div>
+                        </ul>
+                        <h3><u>RapidMiner</u></h3>
+                        <ul>
+                            <li>RapidMiner es una plataforma integral de análisis predictivo y minería de datos, diseñada para cubrir todo el ciclo de vida de un proyecto, desde la preparación de datos hasta la implementación de modelos.</li>
+                        
+                            <div class="punto">
+                                <ul>
+                                    <li>Plataforma integral: RapidMiner cubre todo el ciclo de vida de un proyecto de análisis de datos, desde la preparación y limpieza de datos hasta la implementación de modelos. Es más completo en cuanto a la gestión del proceso de análisis de datos.</li>
+                                    <li>Soporte para colaboración: RapidMiner facilita la colaboración entre equipos con funcionalidades avanzadas para la gestión de proyectos y la integración de resultados, lo que lo hace útil en entornos empresariales.</li>
+                                    <li>Gran variedad de algoritmos: Ofrece una amplia gama de algoritmos para minería de datos, aprendizaje automático y análisis predictivo, lo que permite realizar tareas avanzadas sin cambiar de plataforma.</li>
+                                    <li>Soporte empresarial y capacidades de integración: RapidMiner está diseñado para entornos empresariales, ofreciendo capacidades de integración con bases de datos, sistemas en la nube y otras plataformas empresariales.</li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                        <h3><u>Weka</u></h3>
+                        <ul>
+                            <li>Weka es una herramienta de código abierto enfocada en la minería de datos y aprendizaje automático, ampliamente utilizada en entornos académicos y de investigación.</li>
+                        
+                        <div class="punto">
+                            <ul>
+                                <li>Enfoque académico y de investigación: Weka es ampliamente utilizada en entornos académicos debido a su simplicidad y a su vasto repertorio de algoritmos para minería de datos y aprendizaje automático. Es ideal para quienes quieren estudiar o probar teorías en un entorno controlado.</li>
+                                <li>Fácil de usar y configuraciones predeterminadas: Weka tiene una interfaz amigable que permite trabajar rápidamente con varios algoritmos de clasificación, regresión y clustering, siendo una buena opción para análisis rápidos sin necesidad de programar.</li>
+                                <li>Herramientas para evaluación de modelos: Weka tiene herramientas integradas para evaluar y comparar el rendimiento de diferentes modelos, lo que es útil en investigaciones y pruebas comparativas.</li>
+                                <li>Ligereza y eficiencia: Al ser una herramienta ligera y fácil de configurar, es ideal para análisis rápidos sin requerir muchos recursos de sistema.</li>
+                            </ul>
+                        </div>
+                        </ul>
                     </div>
                 </div>
+            </div>
         
             <button class="accordion"><strong> &#10148; Tipos de Modelos</strong></button>
             <div class="panel">
                 <div class="content-container">
-                    <p>
-                        Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
-                        Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
-                    </p>
-                    <ul>
-                        <li>CSV (Comma-Separated Values): Estructura tabular donde los valores están separados por comas.</li>
-                        <li>Excel (.xls, .xlsx): Archivos de hojas de cálculo con funcionalidades adicionales.</li>
-                        <li>JSON (JavaScript Object Notation): Estructura basada en texto que almacena datos en formato clave-valor.</li>
-                        <li>SQL: Datos almacenados en bases de datos relacionales.</li>
-                        <li>Texto: Documentos en formato TXT, PDF o procesados como series de caracteres.</li>
-                    </ul>
+                    
+                        <h2>Modelos de clasificación</h2>
+                        <p>Tiene como objetivo asignar una categoría o clase a una observación o conjunto de datos.</p>
+                        <ul>
+                            <li><h3><u>Árboles de decisión</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos jerárquicos que dividen el espacio de características en segmentos.</li>
+                                </ul>
+                            </div>   
+                            
+                            <li><h3><u>Máquinas de soporte vectorial (SVM)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos que buscan un hiperplano que separa las clases con el margen más amplio.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Redes Neuronales</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos inspirados en el cerebro humano que aprenden patrones complejos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>K-Nearest Neighbors (K-NN)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación basada en la proximidad de los datos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Naive Bayes</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación probabilística basada en el teorema de Bayes con la suposición de independencia.</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <h2>Modelos de clasificación</h2>
+                        <p>Tiene como objetivo asignar una categoría o clase a una observación o conjunto de datos.</p>
+                        <ul>
+                            <li><h3><u>Árboles de decisión</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos jerárquicos que dividen el espacio de características en segmentos.</li>
+                                </ul>
+                            </div>   
+                            
+                            <li><h3><u>Máquinas de soporte vectorial (SVM)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos que buscan un hiperplano que separa las clases con el margen más amplio.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Redes Neuronales</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos inspirados en el cerebro humano que aprenden patrones complejos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>K-Nearest Neighbors (K-NN)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación basada en la proximidad de los datos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Naive Bayes</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación probabilística basada en el teorema de Bayes con la suposición de independencia.</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <h2>Modelos de clasificación</h2>
+                        <p>Tiene como objetivo asignar una categoría o clase a una observación o conjunto de datos.</p>
+                        <ul>
+                            <li><h3><u>Árboles de decisión</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos jerárquicos que dividen el espacio de características en segmentos.</li>
+                                </ul>
+                            </div>   
+                            
+                            <li><h3><u>Máquinas de soporte vectorial (SVM)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos que buscan un hiperplano que separa las clases con el margen más amplio.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Redes Neuronales</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Modelos inspirados en el cerebro humano que aprenden patrones complejos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>K-Nearest Neighbors (K-NN)</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación basada en la proximidad de los datos.</li>
+                                </ul>
+                            </div>
+
+                            <li><h3><u>Naive Bayes</u></h3></li>
+                            <div class="punto">
+                                <ul>
+                                    <li>Clasificación probabilística basada en el teorema de Bayes con la suposición de independencia.</li>
+                                </ul>
+                            </div>
+                        </ul>        
                 </div>
             </div>
 
@@ -157,7 +296,7 @@
 
         </div>
         <div class="quizz-btn-container">
-            <a href="../quizz/codigo_juego.php" class="boton-volver"> <strong>Ir a quizz</strong> </a>
+            <a href="../quizz/codigo_juego.php" class="boton-quizz"> <strong>Ir a quizz</strong> </a>
         </div>
     </div>
         <script>

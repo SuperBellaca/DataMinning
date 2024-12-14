@@ -18,10 +18,13 @@ body{
     border-radius: 20px;
     max-width: 400px; /* Limitar el ancho máximo */
     max-height: 300px;
+    
+    text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.71), 
+     1px -1px 0 rgba(255, 255, 255, 0.71), 
+    -1px  1px 0 rgba(255, 255, 255, 0.71), 
+     1px  1px 0 rgba(255, 255, 255, 0.71);
 }
-
-
-
 
 /*Barra de navegación para index*/
 .nav-bar-index{
@@ -96,7 +99,7 @@ body{
     border: 1px solid #404040;
     text-align: left;
     outline: none;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 550;
     color: white;
     background-color: #4c4c4c;
@@ -105,10 +108,16 @@ body{
     border-radius: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-shadow: 
+    -1px -1px 0 rgb(24, 24, 24), 
+     1px -1px 0 rgb(24, 24, 24), 
+    -1px  1px 0 rgb(24, 24, 24), 
+     1px  1px 0 rgb(24, 24, 24);
 }
 
 .accordion:hover {
     background-color: #858585;
+
 }
 
 .panel {
@@ -139,16 +148,32 @@ body{
 .boton-quizz {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0afe43d1;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 25px;
+    border-radius: 30px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    border: 1px groove rgba(9, 153, 9, 0.781);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    /* Borde delineado en el texto */
+    text-shadow: 
+        -1px -1px 0 rgba(107, 222, 107, 0.781), 
+         1px -1px 0 rgba(107, 222, 107, 0.781), 
+        -1px  1px 0 rgba(107, 222, 107, 0.781), 
+         1px  1px 0 rgba(107, 222, 107, 0.781);
 }
+
 
 .boton-quizz:hover {
     background-color: #0056b3;
+    text-shadow: 
+    -2px -2px 0 rgba(67, 129, 192, 0.781), 
+     2px -2px 0 rgba(67, 129, 192, 0.781), 
+    -2px  2px 0 rgba(67, 129, 192, 0.781), 
+     2px  2px 0 rgba(67, 129, 192, 0.781);
 }
 
 footer{
@@ -207,4 +232,40 @@ ul li::before {
     position: absolute;
     left: 0;
     color: #05f80e;  /* Color verde para los íconos */
+}
+
+.cubes ul {
+    list-style: none; /* Quita los puntos de las listas */
+    padding-left: 20px; /* Añade espacio a la izquierda de la lista */
+}
+
+.cubes ul li {
+    position: relative; /* Necesario para que ::before funcione */
+    font-weight: normal; /* Texto más ligero */
+}
+
+/* Añade el cuadrado negro antes de cada ítem de la lista */
+.cubes ul li::before {
+    content: "■"; /* El ícono negro */
+    position: absolute;
+    left: -20px; /* Ajusta la posición del cuadrado */
+    color: black; /* Color negro */
+}
+
+.punto ul {
+    list-style: none; /* Quita los puntos de las listas */
+    padding-left: 20px; /* Añade espacio a la izquierda de la lista */
+}
+
+.punto ul li {
+    position: relative; /* Necesario para que ::before funcione */
+    font-weight: normal; /* Texto más ligero */
+}
+
+/* Añade el cuadrado negro antes de cada ítem de la lista */
+.punto ul li::before {
+    content: "•"; /* El ícono negro */
+    position: absolute;
+    left: -20px; /* Ajusta la posición del cuadrado */
+    color: black; /* Color negro */
 }

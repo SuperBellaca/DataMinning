@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Minería de datos</title>
+</head>
+<body>
+    
+    <div class="nav-bar-index">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+        </div>
+        <div>
+            <a href="{{ url_for('modulo') }}" class="boton-educativo"> <strong>Educativo</strong> </a>
+        </div>
+    </div>
+
+    <div class="body-info">
+        <h1 class="titulo">Minería de datos</h1>
+        
+        <div class="form-container">
+            <h2>Subir Archivo CSV</h2>
+            <p>Sube un archivo CSV para generar los gráficos visualizados a continuación. Una vez hecho lo anterior, dirígete a "Grafico de CSV procesado".</p>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" name="file" accept=".csv" required>
+                </div>
+                <button type="submit">Subir y Mostrar Gráficos</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <button class="accordion"><strong> &#10148; Manual para procesar datasets</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    
+                </div>
+            </div>
+        
+            <button class="accordion"><strong> &#10148; Gráfico del CSV procesado</strong></button>
+            <div class="panel">
+                <div class="content-container">
+                    <h2>Gráficos Generados</h2>
+                    {% if graph_exists %}
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                            <div>
+                                <h3>Distribución por Género</h3>
+                                <img src="{{ url_for('static', filename='gender_distribution.png') }}" alt="Distribución por Género" style="width: 100%; max-width: 400px;">
+                            </div>
+                            <div>
+                                <h3>Frecuencia de Compra</h3>
+                                <img src="{{ url_for('static', filename='purchase_frequency.png') }}" alt="Frecuencia de Compra" style="width: 100%; max-width: 400px;">
+                            </div>
+                            <div>
+                                <h3>Clientes con Mayor Frecuencia</h3>
+                                <img src="{{ url_for('static', filename='top_clients.png') }}" alt="Clientes con Mayor Frecuencia" style="width: 100%; max-width: 400px;">
+                            </div>
+                        </div>
+                    {% else %}
+                        <p>Aún no se ha generado ningún gráfico. Sube un archivo CSV para ver los resultados.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <hr>
+    <footer>
+        <p class="copy">&copy; | 2024 | David Cortés - Javiera Araya - Cristóbal Sáez - Diego Pizarro</p>
+    </footer>
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', function () {
+                const panel = this.nextElementSibling;
+                const isCurrentlyOpen = panel.style.display === 'block';
+
+                // Cerrar todos los paneles
+                accordions.forEach(acc => acc.nextElementSibling.style.display = 'none');
+
+                // Si el panel actual estaba cerrado, abrirlo
+                if (!isCurrentlyOpen) {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

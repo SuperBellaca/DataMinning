@@ -23,22 +23,52 @@
             <button class="accordion"><strong> &#10148; Manual para procesar datasets</strong></button>
             <div class="panel">
                 <div class="content-container">
-                <p>
-                    Un dataset es una colección estructurada de datos que sirve como base para análisis o entrenamiento de modelos.
-                     Los datasets suelen estar organizados en filas y columnas, donde cada fila representa una instancia o registro, y cada columna, una variable o característica específica del fenómeno que se está estudiando.
-                </p>
+                    <div class="form-container">
+                        <h2>Subir Archivo CSV</h2>
+                        <p>Sube un archivo CSV para generar los gráficos visualizados a continuación.</p>
+                        <form action="/" method="POST" enctype="multipart/form-data">
+                            <div class="file-input">
+                                <input type="file" name="file" accept=".csv" required>
+                            </div>
+                            <button type="submit">Subir y Mostrar Gráficos</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         
             <button class="accordion"><strong> &#10148; Gráfico del CSV procesado</strong></button>
             <div class="panel">
                 <div class="content-container">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin placerat gravida. In hac habitasse platea dictumst. Nam dignissim eleifend nulla. In hac habitasse platea dictumst. Morbi nec urna nisl.
-                         Etiam ullamcorper consequat diam in dignissim. Donec sed ligula lobortis, pellentesque nulla et, sagittis purus. In quis facilisis ante, eu hendrerit massa. Sed enim est, vulputate nec justo eget, molestie sagittis risus.</p>
+                    <!--
+                    <h2>Gráficos Generados</h2>
+                    {% if graph_exists %}
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                            <div>
+                                <h3>Distribución por Género</h3>
+                                <img src="{{ url_for('static', filename='gender_distribution.png') }}" alt="Distribución por Género" style="width: 100%; max-width: 400px;">
+                            </div>
+                            <div>
+                                <h3>Frecuencia de Compra</h3>
+                                <img src="{{ url_for('static', filename='purchase_frequency.png') }}" alt="Frecuencia de Compra" style="width: 100%; max-width: 400px;">
+                            </div>
+                            <div>
+                                <h3>Clientes con Mayor Frecuencia</h3>
+                                <img src="{{ url_for('static', filename='top_clients.png') }}" alt="Clientes con Mayor Frecuencia" style="width: 100%; max-width: 400px;">
+                            </div>
+                        </div>
+                    {% else %}
+                        <p>Aún no se ha generado ningún gráfico. Sube un archivo CSV para ver los resultados.</p>
+                    {% endif %}-->
                 </div>
             </div>
         </div>
     </div>
+    
+    
+    <hr>
+    <footer>
+        <p class="copy">&copy; | 2024 | David Cortés - Javiera Araya - Cristóbal Sáez - Diego Pizarro</p>
+    </footer>
     <script>
         const accordions = document.querySelectorAll('.accordion');
 
@@ -57,10 +87,14 @@
             });
         });
     </script>
-    <hr>
-    <footer>
-        <p class="copy">&copy; | 2024 | David Cortés - Javiera Araya - Cristóbal Sáez - Diego Pizarro</p>
-    </footer>
 
+    <style>
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </body>
 </html>
