@@ -19,18 +19,34 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def modulo():
     return render_template("modulo.html")
 
+@app.route("/quiz")
+def quiz():
+    return render_template("quiz.html")
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     graph_files = []  # Lista de gráficos generados
+    table_html = None  # Inicializa variable para almacenar la tabla HTML
+
     if request.method == "POST":
         file = request.files["file"]
         if file:
             filepath = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
             file.save(filepath)
+
+            # Leer y procesar el archivo CSV para mostrarlo como tabla
+            df = read_csv_with_fallback(filepath)
+            if df is not None and not df.empty:
+                # Limitar a las primeras 50 filas
+                table_html = df.head(100).to_html(classes="table table-striped", index=False)
+            
+            # Generar gráficos con el archivo
             generate_graphs(filepath)
-            # Obtener todos los gráficos generados dinámicamente
             graph_files = [f for f in os.listdir("static") if f.endswith(".png")]
-    return render_template("index.html", graph_files=graph_files)
+
+    return render_template("index.html", graph_files=graph_files, table_html=table_html)
+
+
 
 def read_csv_with_fallback(filepath):
     """
@@ -76,7 +92,7 @@ def generate_graphs(filepath):
                 plt.ylabel("Cantidad")
                 plt.xticks(rotation=45)
                 plt.tight_layout()
-                plt.savefig(f"static/{column}_bar.png")
+                plt.savefig(f"static/graphic_bar.png")
                 plt.close()
                 print(f"Gráfico de barras generado para la columna '{column}'")
                 break

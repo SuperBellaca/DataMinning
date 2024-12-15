@@ -29,6 +29,32 @@
                 </div>
                 <button type="submit">Subir y Mostrar Gráficos</button>
             </form>
+            <div class="container mt-5">
+    <h2>Mostrar tablas del CSV</h2>
+    
+    <!-- Formulario para cargar archivo -->
+    <form method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="file" class="form-label"></label>
+            <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Subir y Mostrar Tabla</button>
+    </form>
+
+    <!-- Aquí se visualiza la tabla del dataset -->
+    <div class="table-container">
+        {% if table_html %}
+            <h3>Tabla del CSV</h3>
+            <div class="table-responsive">
+                {{ table_html | safe }}
+            </div>
+        {% endif %}
+    </div>
+    
+
+
+            <!--Aquí se visualiza la tabla del dataset.-->
+
         </div>
 
         <div class="info">
@@ -43,19 +69,19 @@
             <div class="panel">
                 <div class="content-container">
                     <h2>Gráficos Generados</h2>
-                    {% if graph_exists %}
+                    {% if graph_files %}
                         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
                             <div>
-                                <h3>Distribución por Género</h3>
-                                <img src="{{ url_for('static', filename='gender_distribution.png') }}" alt="Distribución por Género" style="width: 100%; max-width: 400px;">
+                                <h3>Gráfico de líneas de datos numéricos</h3>
+                                <img src="{{ url_for('static', filename='numeric_lines.png') }}" alt="Gráfico de líneas de datos numéricos" style="width: 100%; max-width: 400px;">
                             </div>
                             <div>
-                                <h3>Frecuencia de Compra</h3>
-                                <img src="{{ url_for('static', filename='purchase_frequency.png') }}" alt="Frecuencia de Compra" style="width: 100%; max-width: 400px;">
+                                <h3>Gráfico de pie generado</h3>
+                                <img src="{{ url_for('static', filename='pie_chart.png') }}" alt="Gráfico de pie generado" style="width: 100%; max-width: 400px;">
                             </div>
                             <div>
-                                <h3>Clientes con Mayor Frecuencia</h3>
-                                <img src="{{ url_for('static', filename='top_clients.png') }}" alt="Clientes con Mayor Frecuencia" style="width: 100%; max-width: 400px;">
+                                <h3>Gráfico de barras generado</h3>
+                                <img src="{{ url_for('static', filename='graphic_bar.png') }}" alt="Gráfico de barras generado" style="width: 100%; max-width: 400px;">
                             </div>
                         </div>
                     {% else %}
@@ -89,5 +115,15 @@
             });
         });
     </script>
+    <style>
+        .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </body>
 </html>

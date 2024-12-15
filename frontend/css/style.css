@@ -82,7 +82,6 @@ body{
     
 }
 
-
 .logo{
     padding: 5px;
     padding-left: 102px;
@@ -196,23 +195,14 @@ footer{
 }
 
 .body-info .content-container p {
-    all: unset; /* Elimina cualquier estilo heredado */
     color: #000000;
-    line-height: 1.6;
     font-weight: 550;
+    padding-left: 15px;  /* Aquí se agrega sangría a todo el párrafo */
+    padding-right: 30px;
+    text-indent: 15px;
     text-align: justify;
-    padding-left: 20px;  /* Aquí se agrega sangría a todo el párrafo */
-    padding-right: 10px;
 }
 
-/* Estilo para los p fuera del .content-container */
-.body-info > p {
-    line-height: 1.6;
-    padding-left: 50px;
-    padding-right: 50px;
-    text-align: justify;
-    text-indent: 15px;
-}
 
 /* Estilo para las listas */
 ul {
@@ -222,9 +212,12 @@ ul {
 
 ul li {
     margin: 10px 0;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 50px;
     font-weight: 420;
     position: relative;
+    text-align: justify;
+    text-indent: 15px;
 }
 
 ul li::before {
@@ -242,30 +235,75 @@ ul li::before {
 .cubes ul li {
     position: relative; /* Necesario para que ::before funcione */
     font-weight: normal; /* Texto más ligero */
+    padding-left: 20px; /* Mueve el texto hacia la derecha */
+    text-align: justify;
+    text-indent: 15px;
 }
 
 /* Añade el cuadrado negro antes de cada ítem de la lista */
 .cubes ul li::before {
     content: "■"; /* El ícono negro */
     position: absolute;
-    left: -20px; /* Ajusta la posición del cuadrado */
+    left: 0; /* Ajusta la posición del cuadrado */
     color: black; /* Color negro */
 }
 
 .punto ul {
-    list-style: none; /* Quita los puntos de las listas */
-    padding-left: 20px; /* Añade espacio a la izquierda de la lista */
+    padding-left: 30px; /* Mayor indentación */
 }
 
-.punto ul li {
-    position: relative; /* Necesario para que ::before funcione */
-    font-weight: normal; /* Texto más ligero */
-}
-
-/* Añade el cuadrado negro antes de cada ítem de la lista */
 .punto ul li::before {
-    content: "•"; /* El ícono negro */
+    content: "•"; /* Punto negro */
     position: absolute;
-    left: -20px; /* Ajusta la posición del cuadrado */
-    color: black; /* Color negro */
+    left: 0;
+    color: black;
 }
+
+/* Sublistas con flecha */
+.flecha ul {
+    padding-left: 40px; /* Mueve la sublista hacia la derecha */
+}
+
+.flecha ul li::before {
+    content: "➣"; /* Flecha */
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+/* Corregir conflicto: asegurar que .punto tenga prioridad */
+.flecha .punto ul {
+    padding-left: 30px; /* Sublistas con punto se mantienen alineadas */
+}
+
+.flecha .punto ul li::before {
+    content: "•"; /* Punto negro */
+    color: black;
+}
+
+.punto-flecha ul {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding-left: 60px; /* Desplaza todo el contenido hacia la derecha */
+}
+
+.punto-flecha ul li {
+    position: relative; /* Asegura el posicionamiento */
+    padding-left: 15px; /* Espacio entre el punto y el texto */
+    text-align: justify;
+    text-indent: 15px;
+}
+
+.punto-flecha ul li::before {
+    content: "•"; /* Punto negro */
+    position: absolute;
+    left: 0; /* Punto pegado al inicio del padding */
+    color: black;
+}
+
+h4{
+    margin-left: 55px;
+    margin-right: 55px;
+    text-align: justify;
+    text-indent: 15px;
+}
+
